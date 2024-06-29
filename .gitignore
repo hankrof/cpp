@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+# bear artifcats for coc
+compile_commands.json
+
+# coc cache
+.cache
+
+# Build
+build
+
