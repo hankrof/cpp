@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION "3.10.0")
+project(test_cpp_utility)
+add_compile_options(-std=gnu++17)
+add_compile_options(-Wall -Werror -g3)
+file(GLOB SRCS src/domain/*.cpp)
+add_executable(${PROJECT_NAME} src/app/test_main.cpp ${SRCS})
+target_include_directories(${PROJECT_NAME} PUBLIC include)
+target_link_libraries(${PROJECT_NAME} PUBLIC gtest gmock)
