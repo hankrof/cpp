@@ -1,8 +1,8 @@
-#include "domain/tokenizer.h"
+#include "utility/tokenizer.h"
 #include <gtest/gtest.h>
 TEST(Tokenizer, ParseABCD)
 {
-    domain::Tokenizer tokenizer;
+    utility::Tokenizer tokenizer;
     std::string input = "A B C D";
     std::string delim = " ";
     auto tokens = tokenizer.split(input, delim);
@@ -15,7 +15,7 @@ TEST(Tokenizer, ParseABCD)
 
 TEST(Tokenizer, Parse1920x1080)
 {
-    domain::Tokenizer tokenizer;
+    utility::Tokenizer tokenizer;
     std::string input = "1920 x 1080";
     std::string delim = " x";
     auto tokens = tokenizer.split(input, delim);
@@ -26,7 +26,7 @@ TEST(Tokenizer, Parse1920x1080)
 
 TEST(Tokenizer, SplitOneStringWithSpaceDelimeter)
 {
-    domain::Tokenizer tokenizer;
+    utility::Tokenizer tokenizer;
     std::string input = "hello";
     std::string delim = " ";
     auto tokens = tokenizer.split(input, delim);
@@ -37,7 +37,7 @@ TEST(Tokenizer, SplitOneStringWithSpaceDelimeter)
 
 TEST(Tokenizer, SplitOneStringWithoutDelimeter)
 {
-    domain::Tokenizer tokenizer;
+    utility::Tokenizer tokenizer;
     std::string input = "hello";
     std::string delim = "";
     auto tokens = tokenizer.split(input, delim);
@@ -48,7 +48,7 @@ TEST(Tokenizer, SplitOneStringWithoutDelimeter)
 
 TEST(Tokenizer, SplitOneStringHavingLeadingSpaceWithSpaceDelimeter)
 {
-    domain::Tokenizer tokenizer;
+    utility::Tokenizer tokenizer;
     std::string input = " hello";
     std::string delim = " ";
     auto tokens = tokenizer.split(input, delim);
@@ -59,7 +59,7 @@ TEST(Tokenizer, SplitOneStringHavingLeadingSpaceWithSpaceDelimeter)
 
 TEST(Tokenizer, SplitOneStringHavingTrailingSpaceWithSpaceDelimeter)
 {
-    domain::Tokenizer tokenizer;
+    utility::Tokenizer tokenizer;
     std::string input = "hello ";
     std::string delim = " ";
     auto tokens = tokenizer.split(input, delim);

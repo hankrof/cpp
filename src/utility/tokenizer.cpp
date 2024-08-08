@@ -1,6 +1,6 @@
-#include "domain/tokenizer.h"
+#include "utility/tokenizer.h"
 #include <sstream>
-using namespace domain;
+using namespace utility;
 std::vector<std::string> Tokenizer::split(const std::string text, const std::string delimeter)
 {
     std::vector<std::string> tokens;

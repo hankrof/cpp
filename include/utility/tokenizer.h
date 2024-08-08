@@ -1,8 +1,8 @@
-#ifndef __TOKENIZER_H__
-#define __TOKENIZER_H__
+#ifndef __UTILITY_TOKENIZER_H__
+#define __UTILITY_TOKENIZER_H__
 #include <string>
 #include <vector>
-namespace domain
+namespace utility
 {
     class Tokenizer
     {
