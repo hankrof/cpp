@@ -1,19 +1,12 @@
 #include <gtest/gtest.h>
 #include <rfl.hpp>
 #include <rfl/json.hpp>
-TEST(ReflectCppTest, HelloWorld)
+#include "domain/person.h"
+
+TEST(ReflectCppTest, ReflectFromJsonString)
 {
-    struct Person {
-        std::string first_name;
-        std::string last_name;
-        int age;
-    };
-
-    const auto homer =
-        Person{.first_name = "Homer",
-               .last_name = "Simpson",
-               .age = 45};
-
+    const auto homer = domain::Person {"Homer", "Simpson", 45};
     const std::string json_string = rfl::json::write(homer);
-    auto homer2 = rfl::json::read<Person>(json_string).value();
+    auto reflHomer = rfl::json::read<domain::Person>(json_string).value();
+    ASSERT_EQ(homer, reflHomer);
 }
