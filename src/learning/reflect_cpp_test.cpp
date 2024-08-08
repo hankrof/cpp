@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include <rfl.hpp>
+#include <rfl/json.hpp>
 TEST(ReflectCppTest, HelloWorld)
 {
     struct Person {
